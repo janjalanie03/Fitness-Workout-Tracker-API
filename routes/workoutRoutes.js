@@ -67,7 +67,7 @@ router.put('/:id', (req, res) => {
   
     workout.name = name || workout.name;
     workout.type = type || workout.type;
-    workout.duration = duration || workout.duration;
+    if (duration !== undefined) workout.duration = duration;
   
     res.json({ message: 'Workout updated successfully', workout });
   });
