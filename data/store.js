@@ -1,70 +1,51 @@
-let users = [
-  { id: 1, name: "Alice Johnson", role: "Project Manager" },
-  { id: 2, name: "Bob Smith", role: "Frontend Developer" },
-  { id: 3, name: "Charlie Brown", role: "Backend Developer" },
-  { id: 4, name: "Diana Prince", role: "UI/UX Designer" }
-];
-
-let projects = [
-  { id: 1, name: "Website Redesign", description: "Revamp company website UI" },
-  { id: 2, name: "Mobile App", description: "Build fitness tracking app" }
-];
-
-let tasks = [
+let workouts = [
   {
     id: 1,
-    projectId: 1,
-    title: "Design Homepage",
-    assignedTo: 4,
-    status: "Completed"
+    name: "Morning Run",
+    type: "Cardio",
+    duration: 30,
+    createdAt: new Date().toISOString()
   },
   {
     id: 2,
-    projectId: 1,
-    title: "Develop Landing Page",
-    assignedTo: 2,
-    status: "In Progress"
+    name: "Upper Body Strength",
+    type: "Strength",
+    duration: 45,
+    createdAt: new Date().toISOString()
   },
   {
     id: 3,
-    projectId: 2,
-    title: "Setup API",
-    assignedTo: 3,
-    status: "To Do"
-  },
-  {
-    id: 4,
-    projectId: 2,
-    title: "Create Login Screen",
-    assignedTo: 2,
-    status: "To Do"
+    name: "Yoga Session",
+    type: "Flexibility",
+    duration: 60,
+    createdAt: new Date().toISOString()
   }
 ];
 
-let timelogs = [
+let progressLogs = [
   {
     id: 1,
-    taskId: 1,
-    userId: 4,
-    startTime: new Date("2026-04-30T08:00:00"),
-    endTime: new Date("2026-04-30T10:30:00"),
-    hoursWorked: 2.5
+    workoutId: 1,
+    date: "2026-04-28",
+    calories: 250,
+    notes: "Felt energized",
+    createdAt: new Date().toISOString()
   },
   {
     id: 2,
-    taskId: 2,
-    userId: 2,
-    startTime: new Date("2026-04-30T09:00:00"),
-    endTime: new Date("2026-04-30T12:00:00"),
-    hoursWorked: 3
+    workoutId: 2,
+    date: "2026-04-29",
+    calories: 400,
+    notes: "Challenging but good",
+    createdAt: new Date().toISOString()
   },
   {
     id: 3,
-    taskId: 3,
-    userId: 3,
-    startTime: new Date("2026-04-30T13:00:00"),
-    endTime: new Date("2026-04-30T15:00:00"),
-    hoursWorked: 2
+    workoutId: 3,
+    date: "2026-04-29",
+    calories: 180,
+    notes: "Relaxing session",
+    createdAt: new Date().toISOString()
   }
 ];
 
